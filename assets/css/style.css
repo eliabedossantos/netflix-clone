@@ -1,5 +1,4 @@
 :root {
-    --red: #E50914;
     --black: #141414;
 }
 *{ 
@@ -27,9 +26,11 @@ header {
 header .container{
     display: flex;
     align-items: center;
-    padding: 15px 50px;
-    background-color:rgba(0,0,0, .40);
+    background-color:#000;
     flex-grow: 0;
+}
+.container {
+    padding:15px 40px;
 }
 header .logo img{
     margin-left: 5px;
@@ -92,7 +93,6 @@ header .logo img{
 }
 /*###### MAIN MOVIE ######*/
 .main-movie{
-    padding: 0 50px;
     font-size: 16px;
     background: linear-gradient(rgba(0,0,0, .50),rgba(0,0,0, .50)100%), url("../img/capa-house.jpg");
     height: 600px;
@@ -112,7 +112,7 @@ header .logo img{
 }
 img.title{
     width: 30rem;
-    margin-left: -105px;
+    margin-left: -103px;
     margin-bottom: -60px;
 }
 .button{
@@ -138,4 +138,14 @@ img.title{
     background: rgba(255,255,255, .15);
     cursor: pointer;
     transition: all .3s;
+}
+/*###### CAROUSEL ######*/
+.box-movie{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.carousel {
+    margin-left: 50px;
+    margin-top: -80px;
 }
