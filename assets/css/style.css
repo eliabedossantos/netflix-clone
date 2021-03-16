@@ -30,19 +30,18 @@ header .container{
     flex-grow: 0;
 }
 .container {
-    padding:15px 40px;
+    padding:15px 50px;
 }
 header .logo img{
-    margin-left: 5px;
     width:100px;
     margin-right: 40px;
 }
-.navbar1 a{
+.navbar a{
     color: #fff;
     margin-right: 20px;
    
 }
-.navbar1 a:hover{
+.navbar a:hover{
     color: #AAA;
     transition: all .2s;
 }

@@ -1,0 +1,20 @@
+@media screen and (max-width:1200px){
+    .search{
+        display: none;
+    }
+}
+@media screen and (max-width:920px){
+    .kids {
+        display: none;
+    }
+}
+@media screen and (max-width:830px){
+    .navbar {
+        display: none;
+    }
+}
+@media screen and (max-width:600px){
+    .right-menu {
+        display: none;
+    }
+}
