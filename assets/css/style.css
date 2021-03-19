@@ -1,5 +1,7 @@
 :root {
     --black: #141414;
+    --color-dropdown: rgba(0,0,0, .10);
+    --teste: 1px solid red;
 }
 *{ 
     margin: 0;
@@ -17,6 +19,9 @@ a{
 }
 ::placeholder{
     font-size: medium;
+}
+li {
+    list-style: none;
 }
 /*###### HEADER ######*/
 header {
@@ -54,14 +59,17 @@ header .logo img{
 .search {
     border: 1px solid #fff;
     margin-right: 20px;
+    height: 30px;
+    margin-top: 4px;
 }
 .search input{
     background: #000;
     border: none;
     outline: none;
     width: 230px;
-    height: 30px;
+    height: 28px;
     color:#fff;
+    
 }
 .search i{
     padding: 0 10px 0 5px;
@@ -84,8 +92,11 @@ header .logo img{
     font-size: 1.6em;
 }
 .profile a img {
-    width: 30px;
+    width: 35px;
     border-radius: 4px;
+}
+.profile{
+    padding: 0;
 }
 .profile i{
     margin: 0 0 10px 10px;
@@ -154,4 +165,48 @@ img.title{
 }
 .h3-carousel{
     margin-bottom: 15px;
+}
+
+/* TESTE */
+#conteudo {
+    margin-top:17px;
+    padding:0px 10px;
+    box-shadow:0px 0px 3px #777;
+    width:170px;
+    display:none;
+    position:absolute;
+    right:70px;
+    top: 50px;
+    background-color: rgba(0,0,0, .70);
+}
+#conteudo:before { /*a seta do div flutuante*/
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 145px;
+    background-color:var(--color-dropdown);
+    transform: rotate(45deg);
+    border: 6px solid;
+    border-color:white var(--color-dropdown) var(--color-dropdown) white;
+}
+.bloco {
+    padding:5px 0;
+    position:relative;
+}
+li.profile-dropdown{
+    margin-top: 10px;
+	height: 40px;
+}
+.profile-dropdown a img{
+    float: left;
+    margin-right: 10px;
+}
+.profile-dropdown a p:hover{
+    text-decoration: underline;
+    
+}
+.profile-dropdown a p{
+    padding-top: 10px;
+    color: white;
+    font-size: 0.9em;
 }
