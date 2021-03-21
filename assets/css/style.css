@@ -57,22 +57,34 @@ header .logo img{
     flex-grow: 1;
 }
 .search {
-    border: 1px solid #fff;
+    /* border: 1px solid #fff; */
     margin-right: 20px;
     height: 30px;
     margin-top: 4px;
+    
 }
-.search input{
+.buttonsrc {
+    background-color: black;
+    border: none;
+    cursor: pointer;
+}
+.buttonsrc:focus {
+    outline: thin dotted;
+    outline: 0px auto;
+    outline-offset: 0px;
+}
+.searchinput{
     background: #000;
     border: none;
     outline: none;
-    width: 230px;
-    height: 28px;
+    height: 30px;
     color:#fff;
-    
+    width: 0px;
+    transition: width .4s;
 }
 .search i{
-    padding: 0 10px 0 5px;
+    font-size: larger;
+    color: white;
 }
 .right-menu-items {
     display: flex;
