@@ -1,3 +1,4 @@
+
 :root {
     --black: #141414;
     --color-dropdown: rgba(0,0,0, .10);
@@ -6,6 +7,7 @@
 *{ 
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 /*###### GENERAL ######*/
@@ -17,6 +19,18 @@ body{
 a{
     text-decoration: none;
 }
+::-webkit-input-placeholder{
+    font-size: medium;
+}
+::-moz-placeholder{
+    font-size: medium;
+}
+:-ms-input-placeholder{
+    font-size: medium;
+}
+::-ms-input-placeholder{
+    font-size: medium;
+}
 ::placeholder{
     font-size: medium;
 }
@@ -25,13 +39,20 @@ li {
 }
 /*###### HEADER ######*/
 header {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
 }
 header .container{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     background-color:#000;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
     flex-grow: 0;
 }
 .container {
@@ -48,12 +69,20 @@ header .logo img{
 }
 .navbar a:hover{
     color: #AAA;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
     transition: all .2s;
 }
 /*###### HEADER RIGHT MENU ######*/
 .right-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
 }
 .search {
@@ -80,6 +109,8 @@ header .logo img{
     height: 30px;
     color:#fff;
     width: 0px;
+    -webkit-transition: width .4s;
+    -o-transition: width .4s;
     transition: width .4s;
 }
 .search i{
@@ -87,7 +118,11 @@ header .logo img{
     color: white;
 }
 .right-menu-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 0 20px 0 5px;
 }
@@ -116,12 +151,23 @@ header .logo img{
 /*###### MAIN MOVIE ######*/
 .main-movie{
     font-size: 16px;
+    background: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0, .50)),to(rgba(0,0,0, .50))), url("../img/capa-house.jpg");
+    background: -o-linear-gradient(rgba(0,0,0, .50),rgba(0,0,0, .50)100%), url("../img/capa-house.jpg");
     background: linear-gradient(rgba(0,0,0, .50),rgba(0,0,0, .50)100%), url("../img/capa-house.jpg");
     height: 600px;
     background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: start;
 }
 .sinopse {
@@ -150,6 +196,8 @@ img.title{
 .button:nth-child(1):hover{
     background: rgba(255,255,255, .60);
     cursor: pointer;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
 }
 .button:nth-child(2){
@@ -159,12 +207,16 @@ img.title{
 .button:nth-child(2):hover{
     background: rgba(255,255,255, .15);
     cursor: pointer;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
 }
 /*###### CAROUSEL ######*/
 .box-movie{
     width: 100%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     border-radius: 2px;
 }
@@ -183,6 +235,7 @@ img.title{
 #content1 {
     margin-top:17px;
     padding:0px 10px;
+    -webkit-box-shadow:0px 0px 3px #777;
     box-shadow:0px 0px 3px #777;
     width:170px;
     display:none;
@@ -197,6 +250,8 @@ img.title{
     top: -8px;
     left: 145px;
     background-color:var(--color-dropdown);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
     border: 6px solid;
     border-color:white var(--color-dropdown) var(--color-dropdown) white;
@@ -223,12 +278,15 @@ li.profile-dropdown{
     font-size: 0.9em;
 }
 div.profile:hover i{
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
     transform: rotate(180deg);
 }
 /* ##### DROPDOWN NOTIFY ##### */
 
 #content2 {
     margin-top:17px;
+    -webkit-box-shadow:0px 0px 3px #777;
     box-shadow:0px 0px 3px #777;
     width:460px;
     height: 400px;
@@ -245,12 +303,16 @@ div.profile:hover i{
     top: -8px;
     right: 30px;
     background-color:var(--color-dropdown);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
     border: 6px solid;
     border-color:white var(--color-dropdown) var(--color-dropdown) white;
 }
 #content2 .blocK {
     position:relative;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     padding: 0;
 }
@@ -281,7 +343,3 @@ li.notify-dropdown:hover{
 li.notify-dropdown:hover h4{
     color: #fff;
 }
-
-
-
-
